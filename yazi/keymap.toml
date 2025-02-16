@@ -1,0 +1,4 @@
+[manager]
+append_keymap = [
+	{ on = "<C-q>", run = 'shell "~/setwallpaper.sh $1"', desc = "Just for test!" },
+]

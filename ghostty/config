@@ -1,0 +1,10 @@
+background = 000000
+background-opacity = 0.7
+background-blur-radius = 20
+font-family = JetBrains Mono
+theme = GruvboxDarkHard
+
+
+
+
+shell-integration = bash

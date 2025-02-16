@@ -1,0 +1,173 @@
+{
+  "height": 30,
+  // "spacing": 4,
+  // "width": 1850,
+  // "margin-top": 3,
+  "modules-left": [
+    "group/leftModActions",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "custom/star"
+  ],
+  "modules-right": [
+    "group/memory",
+    "group/cpu",
+    "group/brightness",
+    "group/volume",
+    "network",
+    "group/clock"
+  ],
+  "group/leftModActions": {
+    "orientation": "horizontal",
+    "drawer": {
+      "click-to-reveal": true
+    },
+    "modules": [
+      "custom/arch",
+      "custom/holder",
+      "custom/shutDown",
+      "custom/reboot",
+      "custom/lock",
+      "custom/signOut"
+    ]
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "on-click": "activate",
+    "format-icons": {
+      "urgent": "󱢩",
+      "active": "",
+      "default": ""
+    },
+    "sort-by-number": true
+  },
+  "group/memory": {
+    "orientation": "horizontal",
+    "drawer": {
+      "click-to-reveal": true
+    },
+    "modules": [
+      "custom/skull2",
+      "memory"
+    ]
+  },
+  "group/cpu": {
+    "orientation": "horizontal",
+    "drawer": {
+      "click-to-reveal": true
+    },
+    "modules": [
+      "custom/skull2",
+      "cpu"
+    ]
+  },
+  "group/brightness": {
+    "orientation": "horizontal",
+    "drawer": {
+      "click-to-reveal": true
+    },
+    "modules": [
+      "custom/sun",
+      "cpu"
+    ]
+  },
+  "group/volume": {
+    "orientation": "horizontal",
+    "drawer": {
+      "click-to-reveal": true
+    },
+    "modules": [
+      "custom/volume",
+      "memory"
+    ]
+  },
+  "group/clock": {
+    "orientation": "horizontal",
+    "drawer": {
+      "click-to-reveal": true
+    },
+    "modules": [
+      "clock",
+      "clock#num2"
+    ]
+  },
+  "network": {
+    "format": "",
+    "format-disconnected": "",
+    "tooltip-format": "{ipaddr}/{cidr}",
+    "tooltip-format-disconnected": "Disconnected"
+  },
+  "clock": {
+    "interval": 60,
+    "format": "{:%R}",
+    "tooltip": false
+  },
+  "clock#num2": {
+    "interval": 60,
+    "format": "{:%b  %d, %Y}",
+    "max-length": 25,
+    "tooltip": false
+  },
+  "memory": {
+    "interval": 30,
+    "format": "{percentage}%",
+    "tooltip": true,
+    "tooltip-format": "{used:0.1f}GiB"
+  },
+  "cpu": {
+    "interval": 30,
+    "format": "{usage}%",
+    "tooltip": true
+  },
+  "custom/arch": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/shutDown": {
+    "format": "",
+    "on-click": "poweroff",
+    "tooltip": false
+  },
+  "custom/reboot": {
+    "format": "󰑐",
+    "on-click": "reboot",
+    "tooltip": false
+  },
+  "custom/lock": {
+    "format": "",
+    "on-click": "reboot",
+    "tooltip": false
+  },
+  "custom/signOut": {
+    "format": "",
+    "on-click": "reboot",
+    "tooltip": false
+  },
+  "custom/star": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/skull1": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/skull2": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/sun": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/volume": {
+    "format": "",
+    "tooltip": false
+  }
+}

@@ -1,0 +1,112 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: FontAwesome, JetBrains Mono, Helvetica, Arial, sans-serif;
+  /* font-size: 14px; */
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: rgba(9, 9, 11, 0.8);
+
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  /* background: transparent; */
+
+  /* border-top-right-radius: 14px; */
+  /* border-bottom-right-radius: 14px; */
+  /* border-top-left-radius: 14px; */
+  /* border-bottom-left-radius: 14px; */
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#window {
+  font-size: 9px;
+  color: @color1;
+}
+
+button {
+  box-shadow: inset 0 -3px transparent;
+  border: none;
+  border-radius: 0;
+}
+
+#custom-arch {
+  font-size: 22px;
+  margin: 7px 20px 7px 12px;
+  color: @color1;
+}
+#custom-shutDown {
+  margin: 0 12px;
+  font-size: 15px;
+  color: @color4;
+}
+#custom-lock {
+  margin: 0 12px;
+  font-size: 15px;
+  color: @color4;
+}
+#custom-signOut {
+  margin: 0 12px;
+  font-size: 15px;
+  color: @color4;
+}
+#custom-reboot {
+  margin: 0 12px;
+  font-size: 15px;
+  color: @color4;
+}
+
+#custom-star {
+  font-size: 15px;
+  color: @color1;
+}
+
+#workspaces button {
+  font-size: 10px;
+  background-color: transparent;
+  color: @color4;
+}
+
+#workspaces button.active {
+  color: @color1;
+  font-size: 16px;
+}
+
+#workspaces button.urgent {
+  color: @color2;
+}
+
+#memory,
+#cpu,
+#custom-skull2,
+#custom-sun,
+#custom-volume,
+#network,
+#clock {
+  margin-left: 10px;
+  font-size: 16px;
+  color: @color1;
+}
+
+#custom-sun {
+  color: @color4;
+}
+
+#custom-volume {
+  color: @color7;
+}
+
+#network {
+  color: @color6;
+}
+
+#clock.num2,
+#clock {
+  margin-right: 7px;
+  color: @color1;
+}
