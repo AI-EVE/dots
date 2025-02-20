@@ -1,9 +1,4 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set number")
-vim.cmd("set relativenumber")
-
-
-require("config.lazy")
+require("nayirrit.core")
+require("nayirrit.lazy")
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])

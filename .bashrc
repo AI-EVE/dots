@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-wal -i -s `hyprctl hyprpaper listactive | grep -F DP-5 | cut -d " " -f 3`
+wal -s -i `hyprctl hyprpaper listactive | grep -F DP-5 | cut -d " " -f 3`
 clear
 fastfetch
 alias ls='ls --color=auto'
@@ -19,3 +19,11 @@ alias zen='nohup zen-browser > /dev/null &'
 alias hyprpaper='nohup hyprpaper > /dev/null &'
 alias heroic='nohup heroic > /dev/null &'
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
