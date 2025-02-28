@@ -1,8 +1,5 @@
 vim.g.mapleader = " "
 
-
-
-
 local keymap = vim.keymap -- for conciseness
 
 ---------------------
@@ -32,3 +29,21 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+
+-- Nvim DAP
+keymap.set("n", "<Leader>zj", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })
+keymap.set("n", "<Leader>zl", "<cmd>lua require'dap'.step_over()<CR>", { desc = "Debugger step over" })
+keymap.set("n", "<Leader>zk", "<cmd>lua require'dap'.step_out()<CR>", { desc = "Debugger step out" })
+keymap.set("n", "<Leader>zc", "<cmd>lua require'dap'.continue()<CR>", { desc = "Debugger continue" })
+keymap.set("n", "<Leader>zb", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Debugger toggle breakpoint" })
+keymap.set(
+	"n",
+	"<Leader>zd",
+	"<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+	{ desc = "Debugger set conditional breakpoint" }
+)
+keymap.set("n", "<Leader>ze", "<cmd>lua require'dap'.terminate()<CR>", { desc = "Debugger reset" })
+keymap.set("n", "<Leader>zr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugger run last" })
+
+-- rustaceanvim
+keymap.set("n", "<Leader>zt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })

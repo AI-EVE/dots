@@ -29,6 +29,7 @@ return {
 				"html",
 				"cssls",
 				"tailwindcss",
+				"rust_analyzer",
 				"svelte",
 				"lua_ls",
 				"graphql",
