@@ -27,9 +27,9 @@ return {
 			ensure_installed = {
 				"tsserver",
 				"html",
+				"gopls",
 				"cssls",
 				"tailwindcss",
-				"rust_analyzer",
 				"svelte",
 				"lua_ls",
 				"graphql",

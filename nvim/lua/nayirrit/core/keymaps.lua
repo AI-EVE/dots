@@ -47,3 +47,5 @@ keymap.set("n", "<Leader>zr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "
 
 -- rustaceanvim
 keymap.set("n", "<Leader>zt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
+
+-- golang
