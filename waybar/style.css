@@ -13,16 +13,16 @@
 }
 
 window#waybar {
-  background-color: #282828;
-  color: #fbf1c7;
+  /* background-color: #1e1e2e; */
+  color: #cdd6f4;
   transition-property: background-color;
   transition-duration: 0.5s;
-  /* background: transparent; */
+  background: transparent;
 
-  border-top-right-radius: 1px;
-  border-bottom-right-radius: 1px;
-  border-top-left-radius: 1px;
-  border-bottom-left-radius: 1px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 window#waybar.hidden {
@@ -33,6 +33,10 @@ window#waybar.hidden {
   font-size: 9px;
 }
 
+.module {
+  background-color: #1e1e2e;
+}
+
 button {
   box-shadow: inset 0 -3px transparent;
   border: none;
@@ -40,50 +44,62 @@ button {
 }
 button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #cba6f7;
 }
 #custom-arch {
   font-size: 22px;
-  margin: 0 20px 0 12px;
-  color: #347823;
+  padding: 0 20px 0 12px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  color: #f5c2e7;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #custom-shutDown {
-  margin: 0 12px;
+  padding: 0 12px;
   font-size: 15px;
-  color: #98971a;
+  color: #f38ba8;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #custom-lock {
-  margin: 0 12px;
+  padding: 0 12px;
   font-size: 15px;
-  color: #98971a;
+  color: #a6e3a1;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #custom-signOut {
-  margin: 0 12px;
+  padding: 0 12px;
   font-size: 15px;
-  color: #98971a;
+  color: #a6e3a1;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #custom-reboot {
-  margin: 0 12px;
+  padding: 0 12px;
   font-size: 15px;
-  color: #98971a;
+  color: #a6e3a1;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #custom-cpu {
-  color: #d79921;
+  color: #fab387;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #custom-memory {
-  color: #458588;
+  color: #94e2d5;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #custom-disk {
-  color: #b16286;
+  color: #89b4fa;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #custom-network {
-  color: #689d6a;
+  color: #89b4fa;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #cpu,
 #memory,
 #disk,
 #network {
   padding-right: 16px;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #cpu {
 }
@@ -92,52 +108,74 @@ button:hover {
 #disk {
 }
 #network {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 #custom-after {
   font-size: 17px;
   font-weight: 800;
   padding-right: 3px;
-  margin-left: 20px;
+  padding: 0 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #custom-before {
   font-size: 17px;
   font-weight: 800;
-  margin-right: 17px;
+  padding: 0 17px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 
 #workspaces button {
   font-size: 10px;
   background-color: transparent;
-  color: #fe8019;
-  margin-right: 10px;
-  margin-left: 10px;
+  color: #fab387;
+  padding-right: 10px;
+  padding-left: 10px;
   font-size: 15px;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 
 #workspaces button.active {
-  color: #347823;
+  color: #b4befe;
   font-size: 18px;
 }
 
 #workspaces button.urgent {
-  color: #cc241d;
+  color: #f38ba8;
+}
+#workspaces button:hover {
+  box-shadow: inset 0 -3px #eba0ac;
 }
 button:hover {
   background-color: transparent;
+  box-shadow: inset 0 -3px #eba0ac;
 }
 #custom-sound {
-  color: #fabd2f;
+  color: #f9e2af;
+  padding-left: 20px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #custom-shutDown {
-  color: #cc241d;
+  color: #f38ba8;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #custom-shutDownRight {
-  color: #cc241d;
-  margin-right: 28px;
-  margin-left: 16px;
+  color: #f38ba8;
+  padding-right: 28px;
+  padding-left: 16px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
 #wireplumber,
 #clock,
 #clock.num2 {
-  margin-right: 16px;
+  padding-right: 16px;
+  box-shadow: inset 0 -3px #f5e0dc;
 }
