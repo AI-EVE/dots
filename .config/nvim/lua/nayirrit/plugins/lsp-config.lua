@@ -123,6 +123,17 @@ return {
 					},
 				})
 			end,
+			["ts_ls"] = function()
+				-- configure emmet language server
+				lspconfig["ts_ls"].setup({
+					capabilities = capabilities,
+					filetypes = {
+						"ts",
+						"js",
+					},
+				})
+			end,
+
 			["gopls"] = function()
 				-- configure emmet language server
 				local on_attach = require("nayirrit.plugins.lsp-config")

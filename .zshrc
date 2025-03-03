@@ -58,6 +58,7 @@ alias hyprpaper='nohup hyprpaper > /dev/null &'
 alias heroic='nohup heroic > /dev/null &'
 alias tableplus='nohup tableplus > /dev/null &'
 alias fastfetch='fastfetch --logo `find ~/.config/fastfetch/logos/*.{jpg,png} | shuf -n 1`'
+alias mpvy='~/mpvy.sh'
 # Fuctions
 function y() {
         local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
